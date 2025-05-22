@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { formatDistanceToNow } from 'date-fns'
 import './Task.css'
 
 function Task({ description, createdAt, edit, done, onDone, id, removeTask, changeTask, onSubmitTask }) {
@@ -32,7 +31,6 @@ function Task({ description, createdAt, edit, done, onDone, id, removeTask, chan
         />
         <label>
           <span className="description">{description}</span>
-          <span className="created">{`created ${formatDistanceToNow(createdAt, { includeSeconds: true })} ago`}</span>
         </label>
         <button
           className="icon icon-edit"
